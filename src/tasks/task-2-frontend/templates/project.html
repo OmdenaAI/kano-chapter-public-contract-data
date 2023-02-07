@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+<script src="{% static 'assets/tailwind.css' %}"></script>
+<link rel="stylesheet" href="{% static 'assets/w3.css' %}">
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: teal;
+    color: white;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{% url 'index' %}">Omdena<span class="bg-white text-black">Kano</span></a></h1>
+     
+
+      <nav id="navbar" class="navbar">
+        <ul>
+       
+
+          <li><a class="nav-link scrollto" href="{% url 'index' %}">Home</a></li>
+           <li><a class="nav-link scrollto  active" href="{% url 'projects_view' %}">Projects</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'chart' %}">Visualization</a></li>
+          <li><a class="nav-link scrollto" href="monitor.html">Monitor</a></li>
+          <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="hausa.html">Hausa</a></li>  
+             <li><a href="#">Igbo</a></li>  
+              <li><a href="#">Yoruba</a></li>
+              <li><a href="#">Igala</a></li>        </ul>
+            </li>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<br><br><br>
+
+
+
+    <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 my-10">
+    <h2 class="text-3xl font-semibold text-gray-700 capitalize dark:text-white text-center">Find Project</h2>
+    
+    <form action="" method="POST">
+        <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+
+                        <div>
+                            <label class="text-gray-700" >State</label>
+                          <select name="Self_Employed" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="Yes">State</option>
+                            <option value="Yes">Plateau</option>
+                            <option value="No">Ekiti</option>
+                            <option value="No">Edo</option>
+            
+                          </select>
+                        </div>
+
+                        <div>
+                            <label class="text-gray-700 dark:text-gray-200" >MDA</label>
+                            <select name="Self_Employed" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                              <option value="Yes">MDA</option>
+                              <option value="Yes">Ministry of Education</option>
+                            <option value="No">State Universal Basic Education Commission (SUBEB)</option>
+                            <option value="No">Ministry of Health</option>
+                            <option value="No">Ministry of Works</option>
+
+                          </select>
+                        </div>
+        
+                        <div>
+                            <label class="text-gray-700 dark:text-gray-200">Contractor</label>
+                            <select name="Self_Employed" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                              <option value="Yes">Contractor</option>
+                              <option value="Yes">P.W Nig. Ltd</option>
+                            <option value="No">Foundation Solid Nig. Ltd</option>
+                            <option value="No">CCECC Nig. Ltd</option>
+
+                          </select>
+                        </div>
+        
+                        <div>
+                          <label class="text-gray-700 dark:text-gray-200">Year</label>
+                          <select name="Self_Employed" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="Yes">Year</option>
+                            <option value="Yes">2019</option>
+                          <option value="No">2020</option>
+                          <option value="No">2021</option>
+                          <option value="No">2022</option>
+
+                        </select>
+                      </div>  
+
+                      <div>
+                        <label class="text-gray-700 dark:text-gray-200">Sector</label>
+                        <select name="Self_Employed" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                          <option value="Yes">Sector</option>
+                          <option value="Yes">Health</option>
+                        <option value="No">Education</option>
+                        <option value="No">Environment</option>
+                        <option value="No">Works</option>
+
+                      </select>
+                    </div>
+        </div>
+
+        <br>
+        <div class="flex justify-center mt-6">
+            <button class="px-6 py-3 leading-5 bg-teal-500 hover:bg-green-800 text-white text-lg transition-colors duration-200 transform  rounded-md  focus:outline-none "><a href="result.html">Find</a></button>
+        </div>
+    </form>
+
+
+
+
+    
+</section>
+
+<div class="w3-center">
+
+<form method="get">
+  
+  <input type="text" name="q" placeholder="Search projects by Contractor/title" value="{{request.GET.q}}"  class="w3-border w3-round" style="width:30%;padding: 10px;">
+  <input type="text" name="lga" placeholder="Search projects by Location/MDA" value="{{request.GET.lga}}" class="w3-border w3-round" style="width:30%;padding: 10px;">
+  <button type="submit" class="btn btn-secondary" style="background-color: gray;">Search</button>
+ 
+  <div class="w3-dropdown-hover">
+    <button class="w3-btn w3-teal w3-round">Download</button>
+    <div class="w3-dropdown-content w3-border w3-card w3-teal">
+      <a href="{% url 'download_csv' %}?q={{request.GET.q}}&{{request.GET.lga}}">CSV</a><br>
+  <a href="{% url 'download_json' %}?q={{request.GET.q}}&{{request.GET.lga}}" >JSON</a><br>
+  <a href="{% url 'download_json' %}?q={{request.GET.q}}&{{request.GET.lga}}" >PDF</a>
+
+    </div>
+  </div>
+</form>
+<br>
+<div class="w3-container" style="overflow-x:auto;">
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>CONTRACT TITLE</th>
+      <th>BUDGETED AMOUNT</th>
+      <th>CONTRACT AMOUNT</th>
+      <th>CONTRACTOR</th>
+      <th>LGA</th>
+      <th>MDA</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in projects %}
+      <tr>
+        <td>{{ project.id}}</td>
+        <td>{{ project.contract_title}}</td>
+        <td>{{ project.formatted_amount }}</td>
+        <td>{{ project.formatted_contract}}</td>
+        <td>{{ project.contractor }}</td>
+        <td>{{ project.lga}}</td>
+        <td>{{ project.mda}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+
+<br><br><br>
+
+
+
+<script type="text/javascript"> 
+</script>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>OpenIT</h3>
+              <p>
+                Road Kaduna<br>
+                Kaduna, Nigeria<br><br>
+                <strong>Phone:</strong> +234 8146714240<br>
+                <strong>Email:</strong> info@openit.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Visualize </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Monitor</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Visualize</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Monitor</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Subscribe to our newslater</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>OpenIT</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
